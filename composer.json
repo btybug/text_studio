@@ -1,0 +1,22 @@
+{
+  "name": "btybug.plugins/text_studios",
+  "authors": [
+    {
+      "name": "Sahak",
+      "email": "hakobyan.sahak88@gmail.com"
+    }
+  ],
+  "type": "addon",
+  "route": "text-studio",
+  "require": {
+    "btybug.plugins/studios":"dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "BtyBugPlugins\\TextStudios\\": "src/"
+    },
+    "files": [
+      "src/bootstrap.php"
+    ]
+  }
+}
