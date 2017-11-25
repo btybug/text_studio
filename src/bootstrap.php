@@ -6,3 +6,4 @@
  * Time: 11:15
  */
 addProvider('BtyBugPlugins\TextStudios\Providers\ModuleServiceProvider');
+addStudio('Text Studio','text_studio','text_studio::index');

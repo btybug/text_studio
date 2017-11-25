@@ -1,5 +1,4 @@
-@extends('cms::layouts.admin')
-@section('content')
+
     <div class="row list_222">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
             <div class="cms_module_list module_list_1">
@@ -9,13 +8,13 @@
                 </h3>
                 <hr>
                 <ul class="list-unstyled menuList" id="components-list">
-                    @foreach($groups as $key => $value)
-                        <li class="@if($type == $key) active_class @endif">
-                            <a href="?type={!! $key !!}" rel="tab" class="tpl-left-items">
-                                <span class="module_icon"></span>{!! htmlentities($value) !!}
-                            </a><a data-type="{!! $value !!}" class="add-class-modal pull-right gettype"></a>
-                        </li>
-                    @endforeach
+                    {{--@foreach($groups as $key => $value)--}}
+                        {{--<li class="@if($type == $key) active_class @endif">--}}
+                            {{--<a href="?type={!! $key !!}" rel="tab" class="tpl-left-items">--}}
+                                {{--<span class="module_icon"></span>{!! htmlentities($value) !!}--}}
+                            {{--</a><a data-type="{!! $value !!}" class="add-class-modal pull-right gettype"></a>--}}
+                        {{--</li>--}}
+                    {{--@endforeach--}}
                 </ul>
             </div>
         </div>
@@ -35,15 +34,15 @@
                 <div class="container_main">
                     <div data-role="listitem">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            @if(count($data))
-                                @foreach($data as $item)
-                                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 m-10">
-                                        <div class="bottom_part_1">
-                                            <a href="{!! url('/admin/studios',[$type,$item]) !!}"><span>{!! $item !!}</span></a>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            @endif
+                            {{--@if(count($data))--}}
+                                {{--@foreach($data as $item)--}}
+                                    {{--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 m-10">--}}
+                                        {{--<div class="bottom_part_1">--}}
+                                            {{--<a href="{!! url('/admin/studios',[$type,$item]) !!}"><span>{!! $item !!}</span></a>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--@endforeach--}}
+                            {{--@endif--}}
 
                             {{--<div class="bottom_part_1">--}}
                                 {{--<a href="{!! url('/admin/studios/create/classes/basic') !!}"><span>Classes</span></a>--}}
@@ -81,8 +80,6 @@
             </div>
         </div>
     </div>
-@stop
-
 @section('CSS')
     {!! HTML::style('app/Modules/Resources/Resources/assets/css/new-store.css') !!}
     {!! HTML::style('app/Modules/Framework/Resources/Views/assets/css/styles.css?v=4.3') !!}
