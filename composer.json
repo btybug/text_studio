@@ -18,5 +18,6 @@
     "files": [
       "src/bootstrap.php"
     ]
-  }
+  },
+  "parent": "btybug.plugins/studios"
 }
